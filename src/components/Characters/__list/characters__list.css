@@ -1,0 +1,10 @@
+.characters__list {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 45px;
+    max-width: 70%;
+    justify-content: center;
+}

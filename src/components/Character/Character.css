@@ -1,0 +1,26 @@
+@import url(./__name/character__name.css);
+@import url(./__attribute/character__attribute.css);
+@import url(./__attribute/_title/character__attribute_title.css);
+@import url(./__preview/character__preview.css);
+@import url(./__attribute/_preview/character__attribute_preview.css);
+
+.character {
+    margin: 0;
+    padding: 20px;
+    width: 300px;
+    min-height: 320px;
+    max-height: 500px;
+    border-radius: 16px;
+    background: #1c1c1e;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: 1s;
+}
+.character:hover {
+    transform: scale(1.07);
+    transition: 0.6s ease-in-out;
+}

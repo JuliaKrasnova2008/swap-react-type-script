@@ -12,7 +12,6 @@ export default function Characters() {
   const [value, setValue] = useState(search);
   const [close, setClose] = useState(true);
 
-  //чтобы каждый раз, когда менялся поиск, менялся и инпут
   useEffect(() => {
     setValue(search);
   }, [search]);
@@ -77,7 +76,11 @@ export default function Characters() {
             )}
           </ul>
         )}
-        {value !== "" && <button onClick={handleClose}>X</button>}
+        {value !== "" && (
+          <button className="search__btn" onClick={handleClose}>
+            X
+          </button>
+        )}
       </form>
       <ul className="characters__list">
         {peopleArray.map((elem: peopleT) => {

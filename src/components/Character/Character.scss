@@ -1,3 +1,6 @@
+$yellow-color: #e5e51d;
+$background-blok-color: rgba(142, 142, 152, 0.2);
+
 .character {
   margin: 0;
   padding: 20px;
@@ -5,44 +8,27 @@
   min-height: 320px;
   max-height: 500px;
   border-radius: 16px;
-  background: rgba(142, 142, 152, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background: $background-blok-color;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: center;
+  align-items: flex-start;
   cursor: pointer;
-  -webkit-transition: 1s;
   transition: 1s;
 }
-
 .character:hover {
-  -webkit-transform: scale(1.07);
-      -ms-transform: scale(1.07);
-          transform: scale(1.07);
-  -webkit-transition: 0.6s ease-in-out;
+  transform: scale(1.07);
   transition: 0.6s ease-in-out;
 }
-
 .character__attribute_preview {
   font-size: 12px;
 }
-
 .character__attribute_title {
   font-weight: 600;
-  color: #e5e51d;
+  color: $yellow-color;
   font-size: 20px;
 }
-
 .character__attribute {
   margin: 0;
   padding: 0;
@@ -53,12 +39,10 @@
   line-height: 150%; /* 24px */
   letter-spacing: -0.5px;
 }
-
 .character__attribute:nth-child(1) {
   font-weight: 600;
   text-decoration: underline;
 }
-
 .character__name {
   margin: 0 auto;
   margin-bottom: 10px;
@@ -69,9 +53,8 @@
   font-weight: 600;
   line-height: 150%; /* 24px */
   letter-spacing: -0.5px;
-  color: #e5e51d;
+  color: $yellow-color;
 }
-
 .character__preview {
   margin: 0;
   padding: 10px;
@@ -79,21 +62,12 @@
   min-height: 100%;
   max-height: 500px;
   border-radius: 16px;
-  background: rgba(142, 142, 152, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background: $background-blok-color;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 450px) {

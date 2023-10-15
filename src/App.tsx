@@ -13,7 +13,6 @@ function App() {
   const search = useAppSelector((state) => state.people.search);
   const page = useAppSelector((state) => state.people.currentPage);
 
-  //достаем массив из API и сохраняем его в массив из редакса, т.е. он будет обновляться 1 раз при рендере страницы
   useEffect(() => {
     axios
       .get(`${baseURL}/people/?search=${search}&page=${page}`)
@@ -26,7 +25,7 @@ function App() {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Main />} /> 
+        <Route path="/" element={<Main />} />
         <Route path="/:id" element={<PreviewInfo />} />
       </Routes>
     </div>

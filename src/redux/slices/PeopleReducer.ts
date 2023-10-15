@@ -36,24 +36,20 @@ export const peopleSlice = createSlice({
   initialState,
   reducers: {
     setSearch: (state, action: PayloadAction<string>) => {
-      let search = action.payload;
-      state.search = search;
+      state.search = action.payload;
     },
     setPeople: (state, action: PayloadAction<peopleT[]>) => {
-      let people = action.payload;
-      state.people = people;
+      state.people = action.payload;
     },
     setPage: (state, action: PayloadAction<number>) => {
-      let currentPage = action.payload;
-      state.currentPage = currentPage;
+      state.currentPage = action.payload;
     },
     setTotalCount: (state, action: PayloadAction<number>) => {
-      let totalCount = action.payload;
-      state.totalCount = totalCount;
+      state.totalCount = action.payload;
     },
   },
 });
 
-export default peopleSlice.reducer; //экспортируем хранилище
+export default peopleSlice.reducer;
 export const { setSearch, setPeople, setPage, setTotalCount } =
-  peopleSlice.actions; //экспортируем функции (для удобства, чтобы потом обращаться напрямую)
+  peopleSlice.actions;

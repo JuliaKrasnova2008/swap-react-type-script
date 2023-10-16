@@ -1,7 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { baseURL, fetchEvery, filmT, speciesT, starshipT } from "../../utils";
+
 import axios from "axios";
+
 import { peopleT } from "./PeopleAsyncReducer";
+import { baseURL, fetchEvery, filmT, speciesT, starshipT } from "../../utils";
 
 export interface personSliceAsyncState {
   peoplePage: any;

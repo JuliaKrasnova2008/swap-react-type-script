@@ -1,10 +1,12 @@
-import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+
 import Main from "./pages/Main";
 import PreviewInfo from "./pages/PreviewInfo";
-import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./redux/store";
 import { fetchPeople } from "./redux/slices/PeopleAsyncReducer";
+
+import "./App.css";
 
 function App() {
   const dispatch = useAppDispatch();

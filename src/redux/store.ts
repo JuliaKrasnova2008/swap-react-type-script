@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
+
 import PeopleAsyncReducer from "./slices/PeopleAsyncReducer";
 import FilterReducer from "./slices/FilterReducer";
 import PersonAsyncReducer from "./slices/PersonAsyncReducer";

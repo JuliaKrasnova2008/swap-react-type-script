@@ -1,12 +1,14 @@
 import React from "react";
-import "./Pagination.css";
+
 import { setPage } from "../../redux/slices/FilterReducer";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
 import {
   paginationActive,
   paginationUnactive,
   peoplePerPage,
 } from "../../utils";
-import { useAppDispatch, useAppSelector } from "../../redux/store";
+
+import "./Pagination.css";
 
 export default function Pagination() {
   const pageNumbers: number[] = [];

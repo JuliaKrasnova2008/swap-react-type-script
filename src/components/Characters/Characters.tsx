@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+
 import Character from "../Character/Character";
-import "./Characters.css";
-import { setPage, setSearch } from "../../redux/slices/FilterReducer";
 import Pagination from "../Pagination/Pagination";
+import { setPage, setSearch } from "../../redux/slices/FilterReducer";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { peopleT } from "../../redux/slices/PeopleAsyncReducer";
+
+import "./Characters.css";
 
 export default function Characters() {
   const peopleArray = useAppSelector((state) => state.peopleAsync.people);

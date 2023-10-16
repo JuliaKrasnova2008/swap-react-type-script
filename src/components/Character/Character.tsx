@@ -1,7 +1,9 @@
 import React from "react";
-import "./Character.css";
 import { useNavigate } from "react-router-dom";
+
 import { peopleT } from "../../redux/slices/PeopleAsyncReducer";
+
+import "./Character.css";
 
 export interface iCharacterProps {
   elem: peopleT;

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { baseURL, fetchEvery, filmT, speciesT, starshipT } from "../utils";
-import axios from "axios";
+
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { fetchPerson } from "../redux/slices/PersonAsyncReducer";
 import { useAppDispatch, useAppSelector } from "../redux/store";
+import { filmT, speciesT, starshipT } from "../utils";
 
 export default function PreviewInfo() {
   const dispatch = useAppDispatch();
@@ -18,7 +18,7 @@ export default function PreviewInfo() {
     if (id) {
       dispatch(fetchPerson({ id }));
     }
-  }, [id]);
+  }, [dispatch, id]);
 
   return (
     <>

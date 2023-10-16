@@ -1,7 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { baseURL } from "../../utils";
+
 import axios from "axios";
+
 import { filterSliceState } from "./FilterReducer";
+import { baseURL } from "../../utils";
 
 export type peopleT = {
   birth_year: string;

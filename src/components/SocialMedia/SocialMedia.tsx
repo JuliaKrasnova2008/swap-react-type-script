@@ -1,10 +1,12 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
+
 import "./SocialMedia.css";
 import telegram from "../../images/telegram.svg";
 import instagram from "../../images/instagram.svg";
 import facebook from "../../images/facebook.svg";
 import git from "../../images/gitHub.svg";
-import { Link } from "react-router-dom";
 
 export default function SocialMedia() {
   return (

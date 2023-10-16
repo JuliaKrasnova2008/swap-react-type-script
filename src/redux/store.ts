@@ -1,6 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
-import PeopleReducer from "./slices/PeopleReducer";
+import PeopleAsyncReducer from "./slices/PeopleAsyncReducer";
+import FilterReducer from "./slices/FilterReducer";
+import PersonAsyncReducer from "./slices/PersonAsyncReducer";
 
 // const persistedState = localStorage.getItem("reduxState")
 //   ? JSON.parse(localStorage.getItem("reduxState"))
@@ -8,7 +10,9 @@ import PeopleReducer from "./slices/PeopleReducer";
 
 export const store = configureStore({
   reducer: {
-    people: PeopleReducer,
+    filter: FilterReducer,
+    peopleAsync: PeopleAsyncReducer,
+    personAsync: PersonAsyncReducer,
   },
   //preloadedState- состояние, которое должно подгрузиться сначала, и  в него добавляю данные из localStorage
   // preloadedState: persistedState,

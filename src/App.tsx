@@ -2,25 +2,18 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Main from "./pages/Main";
 import PreviewInfo from "./pages/PreviewInfo";
-import axios from "axios";
 import { useEffect } from "react";
-import { baseURL } from "./utils";
-import { setPeople, setTotalCount } from "./redux/slices/PeopleReducer";
 import { useAppDispatch, useAppSelector } from "./redux/store";
+import { fetchPeople } from "./redux/slices/PeopleAsyncReducer";
 
 function App() {
   const dispatch = useAppDispatch();
-  const search = useAppSelector((state) => state.people.search);
-  const page = useAppSelector((state) => state.people.currentPage);
+  const search = useAppSelector((state) => state.filter.search);
+  const currentPage = useAppSelector((state) => state.filter.currentPage);
 
   useEffect(() => {
-    axios
-      .get(`${baseURL}/people/?search=${search}&page=${page}`)
-      .then((res) => {
-        dispatch(setPeople(res.data.results));
-        dispatch(setTotalCount(res.data.count));
-      });
-  }, [search, page]);
+    dispatch(fetchPeople({ search, currentPage }));
+  }, [search, currentPage]);
 
   return (
     <div className="app">

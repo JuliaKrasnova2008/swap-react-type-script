@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Character from "../Character/Character";
 import "./Characters.css";
-import { peopleT, setPage, setSearch } from "../../redux/slices/PeopleReducer";
+import { setPage, setSearch } from "../../redux/slices/FilterReducer";
 import Pagination from "../Pagination/Pagination";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { peopleT } from "../../redux/slices/PeopleAsyncReducer";
 
 export default function Characters() {
-  const peopleArray = useAppSelector((state) => state.people.people);
+  const peopleArray = useAppSelector((state) => state.peopleAsync.people);
   const dispatch = useAppDispatch();
-  const search = useAppSelector((state) => state.people.search);
+  const search = useAppSelector((state) => state.filter.search);
   const [value, setValue] = useState(search);
   const [close, setClose] = useState(true);
+
+  console.log(peopleArray);
 
   useEffect(() => {
     setValue(search);

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Pagination.css";
-import { setPage } from "../../redux/slices/PeopleReducer";
+import { setPage } from "../../redux/slices/FilterReducer";
 import {
   paginationActive,
   paginationUnactive,
@@ -12,8 +12,8 @@ export default function Pagination() {
   const pageNumbers: number[] = [];
   const dispatch = useAppDispatch();
   const paginate = (pageNumber: number) => dispatch(setPage(pageNumber));
-  const totalCount = useAppSelector((state) => state.people.totalCount);
-  const currentPage = useAppSelector((state) => state.people.currentPage);
+  const totalCount = useAppSelector((state) => state.peopleAsync.totalCount);
+  const currentPage = useAppSelector((state) => state.filter.currentPage);
 
   for (let i = 1; i <= Math.ceil(totalCount / peoplePerPage); i++) {
     pageNumbers.push(i);

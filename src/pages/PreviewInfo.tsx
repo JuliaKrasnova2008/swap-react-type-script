@@ -4,26 +4,20 @@ import { baseURL, fetchEvery, filmT, speciesT, starshipT } from "../utils";
 import axios from "axios";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import { fetchPerson } from "../redux/slices/PersonAsyncReducer";
+import { useAppDispatch, useAppSelector } from "../redux/store";
 
 export default function PreviewInfo() {
+  const dispatch = useAppDispatch();
   const { id } = useParams();
-  const [peoplePage, setPeoplePage] = useState<any>({});
-  const [films, setFilms] = useState([]);
-  const [starships, setStarships] = useState([]);
-  const [species, setSpecies] = useState([]);
+  const { peoplePage, films, starships, species } = useAppSelector(
+    (state) => state.personAsync
+  );
 
   useEffect(() => {
-    axios
-      .get(`${baseURL}/people/${id}/`)
-      .then((res) => {
-        setPeoplePage(res.data);
-        fetchEvery(res.data.films, setFilms);
-        fetchEvery(res.data.starships, setStarships);
-        fetchEvery(res.data.species, setSpecies);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (id) {
+      dispatch(fetchPerson({ id }));
+    }
   }, [id]);
 
   return (

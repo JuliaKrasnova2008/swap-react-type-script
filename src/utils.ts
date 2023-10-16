@@ -60,10 +60,9 @@ export type speciesT = {
   url: string;
 };
 
-export function fetchEvery(arr: string[], func: any) {
-  Promise.all(arr.map((url) => axios.get(url).then((resp) => resp.data))).then(
-    (data) => {
-      func(data);
-    }
+export async function fetchEvery(arr: string[]) {
+  const data = await Promise.all(
+    arr.map((url) => axios.get(url).then((resp) => resp.data))
   );
+  return data;
 }

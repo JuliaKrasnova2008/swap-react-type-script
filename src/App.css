@@ -1,9 +1,9 @@
 .app {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    max-width: 1940px;
-    min-height: 100vh;
-    background-color: #000;
-    color: #fff;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1940px;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
 }

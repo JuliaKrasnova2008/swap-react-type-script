@@ -24,7 +24,6 @@
   -webkit-transition: 1s;
   transition: 1s;
 }
-
 .character:hover {
   -webkit-transform: scale(1.07);
       -ms-transform: scale(1.07);
@@ -50,10 +49,9 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
   letter-spacing: -0.5px;
 }
-
 .character__attribute:nth-child(1) {
   font-weight: 600;
   text-decoration: underline;
@@ -67,7 +65,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  line-height: 150%; /* 24px */
+  line-height: 150%;
   letter-spacing: -0.5px;
   color: #e5e51d;
 }

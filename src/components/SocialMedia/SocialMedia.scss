@@ -1,25 +1,25 @@
 .social-media {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 .social-media__icon {
-    margin: 0;
-    padding: 0;
-    width: 38px;
-    height: 38px;
-    cursor: pointer;
-    transition: 1s;
+  margin: 0;
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  transition: 1s;
 }
 .social-media__icon:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 768px) {
-    .social-media__icon {
-        width: 28px;
-        height: 28px;
-    }
+  .social-media__icon {
+    width: 28px;
+    height: 28px;
+  }
 }

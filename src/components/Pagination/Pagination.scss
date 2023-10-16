@@ -1,4 +1,6 @@
 $yellow-color: #e5e51d;
+$color_white: #fff;
+$font-family_1: DM Sans;
 
 .pagination {
   margin: 0 auto;
@@ -11,12 +13,12 @@ $yellow-color: #e5e51d;
 }
 .pagination__link {
   text-decoration: none;
-  color: #fff;
+  color: $color_white;
 }
 .pagination__item {
   margin: 0;
   padding: 5px;
-  font-family: DM Sans;
+  font-family: $font-family_1;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;

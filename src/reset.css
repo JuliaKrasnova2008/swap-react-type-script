@@ -1,72 +1,108 @@
 /* Reset and base styles  */
+/* Links */
+/* Common */
+/* Form */
 * {
   padding: 0px;
   margin: 0px;
   border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
-*,
-*::before,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-:focus,
-:active {
-  /*outline: none;*/
+a {
+  text-decoration: none;
 }
-
-a:focus,
-a:active {
-  /* outline: none;*/
+a:link {
+  text-decoration: none;
 }
-
-/* Links */
-a,
-a:link,
 a:visited {
-  /* color: inherit; */
   text-decoration: none;
-  /* display: inline-block; */
 }
-
 a:hover {
-  /* color: inherit; */
   text-decoration: none;
 }
 
-/* Common */
-aside,
-nav,
-footer,
-header,
-section,
+aside {
+  display: block;
+}
+
+nav {
+  display: block;
+}
+
+footer {
+  display: block;
+}
+
+header {
+  display: block;
+}
+
+section {
+  display: block;
+}
+
 main {
   display: block;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h3 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h4 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 p {
   font-size: inherit;
   font-weight: inherit;
 }
 
-ul,
+ul {
+  list-style: none;
+}
 ul li {
   list-style: none;
 }
 
 img {
   vertical-align: top;
+  max-width: 100%;
+  height: auto;
 }
 
-img,
 svg {
   max-width: 100%;
   height: auto;
@@ -76,23 +112,34 @@ address {
   font-style: normal;
 }
 
-/* Form */
-input,
-textarea,
-button,
-select {
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+input::-ms-clear {
+  display: none;
+}
+input:focus {
+  outline: none;
+}
+input:active {
+  outline: none;
+}
+
+textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
   background-color: transparent;
 }
 
-input::-ms-clear {
-  display: none;
-}
-
-button,
-input[type=submit] {
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
   display: inline-block;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -100,17 +147,31 @@ input[type=submit] {
   background: none;
   cursor: pointer;
 }
-
-input:focus,
-input:active,
-button:focus,
+button:focus {
+  outline: none;
+}
 button:active {
   outline: none;
 }
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
+}
+
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input[type=submit] {
+  display: inline-block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
 }
 
 label {

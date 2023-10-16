@@ -1,4 +1,5 @@
 $background-blok-color: rgba(142, 142, 152, 0.2);
+$font-family_1: DM Sans;
 
 .characters__list {
   margin: 0 auto;
@@ -29,7 +30,7 @@ $background-blok-color: rgba(142, 142, 152, 0.2);
 }
 .search__list {
   margin: 0;
-  font-family: DM Sans;
+  font-family: $font-family_1;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -43,9 +44,9 @@ $background-blok-color: rgba(142, 142, 152, 0.2);
 .search__item {
   cursor: pointer;
   transition: 1s;
-}
-.search__item:hover {
-  opacity: 0.6;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 .search__btn {
   position: absolute;
